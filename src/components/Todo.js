@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import cx from "classnames";
 import { toggleTodo } from "../redux/actions";
-
+import { ListGroup } from "react-bootstrap";
 const Todo = ({ todo, toggleTodo }) => (
-    <li className="todo-item" onClick={() => toggleTodo(todo.id)}>
-        {todo && todo.completed ? "👌" : "👋"}{" "}
+    <ListGroup.Item action variant="warning" className="todo-item" onClick={() => toggleTodo(todo.id)}>
+        {todo && todo.completed ? "✅" : ""}{" "}
         <span
             className={cx(
                 "todo-item__text",
@@ -14,7 +14,7 @@ const Todo = ({ todo, toggleTodo }) => (
         >
             {todo.content}
         </span>
-    </li>
+    </ListGroup.Item>
 );
 
 // export default Todo;

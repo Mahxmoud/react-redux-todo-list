@@ -11,6 +11,7 @@ const VisibilityFilters = ({ activeFilter, setFilter }) => {
                 const currentFilter = VISIBILITY_FILTERS[filterKey];
                 return (
                     <span
+                        style={{width: '15%', justifyContent: 'space-between'}}
                         key={`visibility-filter-${currentFilter}`}
                         className={cx(
                             "filter",
@@ -31,7 +32,6 @@ const VisibilityFilters = ({ activeFilter, setFilter }) => {
 const mapStateToProps = state => {
     return { activeFilter: state.visibilityFilter };
 };
-// export default VisibilityFilters;
 export default connect(
     mapStateToProps,
     { setFilter }

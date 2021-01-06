@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addTodo } from "../redux/actions";
-
+import { Form, Button } from "react-bootstrap";
 class AddTodo extends React.Component {
     constructor(props) {
         super(props);
@@ -19,14 +19,13 @@ class AddTodo extends React.Component {
 
     render() {
         return (
-            <div>
-                <input
-                    onChange={e => this.updateInput(e.target.value)}
-                    value={this.state.input}
-                />
-                <button className="add-todo" onClick={this.handleAddTodo}>
+            <div className='add-tasks' >
+                <Form.Control type="text" onChange={e => this.updateInput(e.target.value)}
+                    placeholder="Enter Your Task"
+                    style={{width: '40%', marginRight: '20px', justifySelf: 'center'}}/>
+                <Button className="add-todo" onClick={this.handleAddTodo}>
                     Add Todo
-        </button>
+                </Button>
             </div>
         );
     }

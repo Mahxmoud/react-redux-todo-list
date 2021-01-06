@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+.header{
+    background-color: rgb(209, 0, 0);
+text-align: center;
+width: 100%;
+height: 250px;
+font-size: 26px;
+color: #ffffff;
+}
+.visibility-filters{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.visibility-filters:hover{
+cursor: pointer;
+}
+
+.add-tasks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.add-todo{
+    background-color:#ffffff!important;
+    border: none;
+    border-color: #ffffff!important;
+    color: rgb(209, 0, 0)!important;
+}
+.todo-item{
+    list-style: none;
+    list-style-type: none;
+}
+.todo-list{
+    min-width: 700px;
+    margin-top: 30px;
+}
